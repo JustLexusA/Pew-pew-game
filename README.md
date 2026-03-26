@@ -1,5 +1,2 @@
 # Pew-pew-game
-tank shooting game
-
-
-Hi
+game name: Tank Arena (might change)
