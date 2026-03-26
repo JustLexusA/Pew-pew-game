@@ -3,9 +3,14 @@ game name: Tank Arena (might change)
 
 # To-do-list
 
-1. Arena
-2. Starting screen
-3. 2 players (vectors)
-4. Classes
-    - Barriers/walls
-    - tanks
+ - [ ] Arena
+ - [ ] Starting screen
+ - [ ] 2 players (vectors)
+ - [ ] Classes
+    - [ ] Barriers/walls
+    - [ ] tanks
+        - [ ] Enemies 
+        - [ ] players
+    - [ ] Bullets
+    - [ ] tempory Buff orbs (speed, atk, additioanl hp | optional )
+- [ ] Upgrades
