@@ -2,7 +2,7 @@
 game name: Tank Arena (might change)
 
 # To-do-list
- - [] start screen
+ - [ ] start screen
     - [ ] gamemodes
         - [ ] endless
     - [ ] options
