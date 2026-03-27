@@ -7,6 +7,7 @@ function setup() {
 function draw() {
 	clear()
 
+	// Checks if the current screen should be start, gameplay, pause or shop and runs the corresponding function
 switch (gameMode) {
 	case start:
 		startMenu();
