@@ -9,7 +9,7 @@ function setup() {
 		new tank('red', 200, 100, 10),
 		new tank('green', 300, 100, 10),
 		new tank('yellow', 400, 100, 10)
-);
+	);
 	tanks.forEach(tank => {
 		tank.draw();
 	});
