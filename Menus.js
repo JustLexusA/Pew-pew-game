@@ -25,37 +25,35 @@ function mousePressed() {
 }
 
 function gameplayScreen() {
-	if (gameMode == gameplay) {
-				background(100);
-				fill('black');
-				textSize(30);
-				textAlign(CENTER, CENTER);
-				text("Gameplay Screen", windowWidth / 2, windowHeight / 2);
-				textSize(20);
-				text("Press 'P' to Pause", windowWidth / 2, windowHeight / 2 + 40);
-		
-			function keyPressed() {
-				if (key === 'P' || key === 'p') {
-					gameMode = pause;
-				}
-		}
-	}
-}
-
-function pauseScreen() {
-	if (gameMode == pause) {
-		background(150);
+		background(100);
 		fill('black');
 		textSize(30);
 		textAlign(CENTER, CENTER);
-		text("Game Paused", windowWidth / 2, windowHeight / 2);
-		textSize(20);
-		text("Press 'P' to Resume", windowWidth / 2, windowHeight / 2 + 40);
+		text("Gameplay Screen", windowWidth / 2, windowHeight / 2);
 
-		function keyPressed() {
-			if (key === 'P' || key === 'p') {
-				gameMode = gameplay;
-			}
+		// pause button on the corner
+		let pauseButtoncolour = color(200, 0, 0);
+		if (mouseX > windowWidth - 90 && mouseX < windowWidth - 10 &&
+			mouseY > 35 && mouseY < 65) {
+			pauseButtoncolour = color(255, 0, 0);
+		}
+		rectMode(CENTER);
+		fill(pauseButtoncolour);
+		rect(windowWidth - 50, 50, 80, 30);
+		fill('white');
+		textSize(15);
+		text("Pause", windowWidth - 50, 50);
+		// checks if pause button is clicked
+		if (mouseIsPressed && mouseX > windowWidth - 90 && mouseX < windowWidth - 10 &&
+			mouseY > 35 && mouseY < 65) {
+			gameMode = pause;
 		}
 	}
+
+function pauseScreen() {
+	background(150);
+	fill('black');
+	textSize(30);
+	textAlign(CENTER, CENTER);
+	text("Game Paused", windowWidth / 2, windowHeight / 2);
 }
