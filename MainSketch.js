@@ -6,7 +6,19 @@ function setup() {
 
 function draw() {
 	clear()
-	startMenu()
-	gameplayScreen()
-	pauseScreen()
+
+switch (gameMode) {
+	case start:
+		startMenu();
+		break;
+	case gameplay:
+		gameplayScreen();
+		break;
+	case pause:
+		pauseScreen();
+		break;
+	case shop:
+		shopScreen();
+		break;
+	}
 }
