@@ -8,4 +8,5 @@ function draw() {
 	clear()
 	startMenu()
 	gameplayScreen()
+	pauseScreen()
 }
