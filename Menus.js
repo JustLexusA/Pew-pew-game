@@ -26,16 +26,18 @@ function mousePressed() {
 
 function gameplayScreen() {
 	if (gameMode == gameplay) {
-			background(100);
-			fill('black');
-			textSize(30);
-			textAlign(CENTER, CENTER);
-			text("Gameplay Screen", windowWidth / 2, windowHeight / 2);
-			textSize(20);
-			text("Press 'P' to Pause", windowWidth / 2, windowHeight / 2 + 40);
+				background(100);
+				fill('black');
+				textSize(30);
+				textAlign(CENTER, CENTER);
+				text("Gameplay Screen", windowWidth / 2, windowHeight / 2);
+				textSize(20);
+				text("Press 'P' to Pause", windowWidth / 2, windowHeight / 2 + 40);
 		
-		if (keyIsDown(80)) { // 'P' key		==> Pause
-			gameMode = pause;
+			function keyPressed() {
+				if (key === 'P' || key === 'p') {
+					gameMode = pause;
+				}
 		}
 	}
 }
