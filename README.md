@@ -3,9 +3,9 @@ game name: Tank Arena (might change)
 
 # To-do-list
  - [ ] start screen
-    - [ ] gamemodes
+    - [ ] gamemodes + button
         - [ ] endless
-    - [ ] options
+    - [ ] options + button
         - [ ] friendly fire
         - [ ] sound
  - [ ] Arena
@@ -14,11 +14,18 @@ game name: Tank Arena (might change)
  - [ ] Classes
     - [ ] Barriers/walls
     - [ ] tanks
-        - [ ] Enemies 
+        - [ ] Enemies
+            - [ ] 10 hp, 1000 boss hp
         - [ ] players
+            - [ ] 10 hp
     - [ ] Bullets
     - [ ] tempory Buff orbs (speed, atk, additioanl hp | optional )
 - [ ] Upgrades
+    - [ ] Seperate currency
+    - [ ] general
+        - [ ] atk increase
+        - [ ] atk speed increase
+        - [ ] HP increase
     - [ ] player 1
         - [ ] dmg redution
         - [ ] chainsaw p1 - optional
