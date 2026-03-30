@@ -9,6 +9,7 @@ function setup() {
 
 function draw() {
 	clear()
+	Arena()
 	
 	
 	// Checks if the current screen should be start, gameplay, pause or shop and runs the corresponding function

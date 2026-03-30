@@ -8,7 +8,7 @@ game name: Tank Arena (might change)
     - [ ] options + button
         - [ ] friendly fire
         - [ ] sound
- - [x] Arena
+ - [ ] Arena
  - [ ] Starting screen
  - [ ] 2 players (vectors)
  - [ ] Classes
