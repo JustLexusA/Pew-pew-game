@@ -9,7 +9,7 @@ function setup() {
 
 function draw() {
 	clear()
-	Arena()
+	
 	
 	// Checks if the current screen should be start, gameplay, pause or shop and runs the corresponding function
 switch (gameMode) {
@@ -22,8 +22,14 @@ switch (gameMode) {
 	case pause:
 		pauseScreen();
 		break;
-	case shop:
-		shopScreen();
-		break;
 	}
 }
+function keyPressed() {
+	if (key === 'p' || key === 'P') {
+		if (gameMode === gameplay) {
+			gameMode = pause;
+		} else if (gameMode === pause) {
+			gameMode = gameplay;
+		}
+	}
+}	

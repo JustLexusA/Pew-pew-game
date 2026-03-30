@@ -1,9 +1,10 @@
 let gameMode
-let start = 0
-let gameplay = 1
-let pause = false
-let shop = 2
+const start = 0
+const gameplay = 1
+const pause = 2
+const shop = 3
 
-//Arena
+// Arena
+
 let w = 700
 let h = 700
