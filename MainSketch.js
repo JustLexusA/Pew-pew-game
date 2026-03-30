@@ -10,7 +10,7 @@ function setup() {
 		new tank('green', 300, 100, 10),
 		new tank('yellow', 400, 100, 10),
 		new playerTank(87, 83, 65, 68, 'cyan', 500, 100, 10),
-		new playerTank(UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW, 'cyan', 500, 100, 10)
+		// new playerTank(UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW, 'cyan', 500, 100, 10)
 	);
 }
 

@@ -6,3 +6,5 @@ let shop = 2
 
 let tanks = []
 let playerTanks = []
+let defaultRotationSpeed = 2;
+let tankVelocity

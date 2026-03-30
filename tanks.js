@@ -5,6 +5,9 @@ class tank {
         this.health = health;
         this.angle = random(0, 360);
         this.size = size;
+        this.width = size / 2;
+        this.height = size;
+        this.rotationSpeed = defaultRotationSpeed;
     }
 
     draw() {
