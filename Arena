@@ -1,6 +1,6 @@
 function Arena() {
 	push()
-	fill('#998A8A')
+	fill('#2e2e2e')
 	strokeWeight(10)
 	rectMode(CENTER)
 	rect(leftwall, roof, w, h)
