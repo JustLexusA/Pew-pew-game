@@ -5,3 +5,4 @@ let pause = 'Paused'
 let shop = 2
 
 let tanks = []
+let playerTanks = []
