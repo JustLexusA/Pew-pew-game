@@ -6,5 +6,5 @@ const shop = 3
 
 // Arena
 
-let w = 700
-let h = 700
+let ArenaWidth;
+let ArenaHeight;
