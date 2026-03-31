@@ -8,10 +8,13 @@ function setup() {
 function draw() {
 	clear();
 	background('white')
+
+	// this draws tanks, put in correct gamemode
 	tanks.forEach(tank => {
 		tank.draw();
 		tank.update();
 	});
+
 	// startMenu()
 	// gameplayScreen()
 	// pauseScreen()
