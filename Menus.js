@@ -30,26 +30,18 @@ function gameplayScreen() {
 		textSize(30);
 		textAlign(CENTER, CENTER);
 		text("Gameplay Screen", windowWidth / 2, windowHeight / 2);
-		
-		// Pause the game when the 'P' key is pressed
+
+		// Press 'P' to pause the game
 		textSize(20);
-		text("Press 'P' to Pause", windowWidth / 2, windowHeight / 2 + 50);
-		if (keyIsDown(80)) { // 'P' key
-			gameMode = pause;
-		}	
-}
+		text("Press 'P' to pause the game", windowWidth / 2, windowHeight / 2 + 40);
+	}
 
 function pauseScreen() {
 	background(150);
 	fill('black');
 	textSize(30);
 	textAlign(CENTER, CENTER);
-	text("Game Paused", windowWidth / 2, windowHeight / 2);
-	// Resume the game when the 'R' key is pressed
+	text("Game Paused", windowWidth / 2, windowHeight / 2);	
 	textSize(20);
-	text("Press 'P' to Resume", windowWidth / 2, windowHeight / 2 + 50);
-	if (keyIsDown(80)) { // 'P' key
-		gameMode = gameplay;
-	}
+	text("Press 'P' to resume the game", windowWidth / 2, windowHeight / 2 + 40);
 }
-
