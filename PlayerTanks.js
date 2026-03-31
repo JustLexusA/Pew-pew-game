@@ -32,27 +32,30 @@ class playerTank extends tank {
 
     checkWalls() {
         // Assign Corners
-        let L1 = createVector(this.pos.x -this.width/2, this.pos.y -this.height/2);
-        let L2 = createVector(this.pos.x -this.width/2, this.pos.y +this.height/2);
-        let R1 = createVector(this.pos.x +this.width/2, this.pos.y -this.height/2);
-        let R2 = createVector(this.pos.x +this.width/2, this.pos.y +this.height/2);
-        // Rotate Corners
-        L1.rotate(this.angle);
-        L2.rotate(this.angle);
-        R1.rotate(this.angle);
-        R2.rotate(this.angle);
+        push();
+        translate(this.pos.x, this.pos.y);
+        rotate(this.angle);
+        let L1 = createVector(0 -this.width/2, 0 -this.height/2);
+        let L2 = createVector(0 -this.width/2, 0 +this.height/2);
+        let R1 = createVector(0 +this.width/2, 0 -this.height/2);
+        let R2 = createVector(0 +this.width/2, 0 +this.height/2);
         // Make List
         let corners = [L1, L2, R1, R2];
         // Check List Against Walls
         for (let i = 0; i < corners.length; i++) {
-            let corner = corners[i]
-            if (corner.x < 0 || corner.x > windowWidth) {
-                tankVelocity.x = 0;
+            let corner = corners[i].rotate(this.angle)
+            if (corner.x + this.pos.x < 0) {
+                this.pos.x = -corner.x;
+            } else if (corner.x + this.pos.x > windowWidth) {
+                this.pos.x = windowWidth - corner.x;
             }
-            else if (corner.y < 0 || corner.y > windowHeight) {
-                tankVelocity.y = 0;
+            if (corner.y + this.pos.y < 0) {
+                this.pos.y = -corner.y;
+            } else if (corner.y + this.pos.y > windowHeight) {
+                this.pos.y = windowHeight - corner.y;
             }
         }
+        pop();
     }
 
     updatePosition() {
