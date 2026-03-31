@@ -9,14 +9,12 @@ game name: Balls Galore (might change)
         - [ ] friendly fire
         - [x] sound
             - [x] bullet
-                - [x] hit //    universfield-powerful-cannon-shot-02-487887.mp3
-                - [x] launch //     freesound_community-cannon-explosion-39434.mp3
+                - [x] hit   universfield-powerful-cannon-shot-02-487887.mp3
+                - [x] launch      freesound_community-cannon-explosion-39434.mp3
             - [x] tank 
-                - [x] movement //   freesound_community-driving-tank-engine-88503.mp3
-                - [x] explode //    lumora_studios-pixel-explosion-319166.mp3
+                - [x] movement    freesound_community-driving-tank-engine-88503.mp3
+                - [x] explode    lumora_studios-pixel-explosion-319166.mp3
  - [x] Arena
-        - [ ] sound
- - [ ] Arena
  - [ ] Starting screen
  - [ ] 2 players (vectors)
  - [ ] Classes

@@ -1,3 +1,7 @@
+function preload() {
+	img = loadImage('grass.jpeg')
+}
+
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(100);
@@ -12,7 +16,7 @@ function draw() {
 	// startMenu()
 	// gameplayScreen()
 	// pauseScreen()
-	// Arena()
+
 
 	
 	
@@ -38,4 +42,4 @@ function keyPressed() {
 			gameMode = gameplay;
 		}
 	}
-}	
+}
