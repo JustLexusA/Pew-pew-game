@@ -9,6 +9,8 @@ function setup() {
 
 	leftwall = Math.floor((windowWidth ) / 2)
 	roof = Math.floor((windowHeight ) / 2)
+	ArenaWidth = windowWidth * 0.9
+	ArenaHeight = windowHeight * 0.9
 }
 
 function draw() {
