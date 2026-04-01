@@ -8,3 +8,4 @@ const shop = 3
 
 let ArenaWidth;
 let ArenaHeight;
+let arenasurface;

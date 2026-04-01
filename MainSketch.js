@@ -1,5 +1,5 @@
 function preload() {
-	img = loadImage('images (1).jpg')
+	arenasurface = loadImage('Textures/grass.jpg')
 }
 
 function setup() {
