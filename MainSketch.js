@@ -1,5 +1,5 @@
 function preload() {
-	img = loadImage('grass.jpeg')
+	img = loadImage('images (1).jpg')
 }
 
 function setup() {
