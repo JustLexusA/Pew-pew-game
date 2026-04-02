@@ -1,5 +1,11 @@
 function setVariables() {
     gameMode = 0;
+    // Arena variables
+    ArenaWidth = windowWidth * 0.9;
+    ArenaHeight = windowHeight * 0.9;
+    leftwall = windowWidth / 2;
+    roof = windowHeight / 2;
+    
 	defaultRotationSpeed = QUARTER_PI / 15;
 	tanks.push(
 		new tank('blue', 100, 100, 10),

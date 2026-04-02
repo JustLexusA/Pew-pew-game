@@ -33,6 +33,16 @@ function draw() {
 	}
 }
 
+function keyPressed() {
+	if (key === 'p' || key === 'P') {
+		if (gameMode === gameplay) {
+			gameMode = pause;
+		} else if (gameMode === pause) {
+			gameMode = gameplay;
+		}
+	}
+}
+
 
 // Use this to make tanks appear, put in gamemode
 //tanks.forEach(tank => {
