@@ -5,6 +5,7 @@ class playerTank extends tank {
         this.down = down;
         this.left = left;
         this.right = right;
+        //this.shoot = 32; // Spacebar
     }
 
     update() {
@@ -27,6 +28,9 @@ class playerTank extends tank {
         if (keyIsDown(this.right)) {
             this.angle += this.rotationSpeed;
         }
+        //if (keyIsDown(this.shoot)) {
+        //    // Shoot Bullet
+        //}
         tankVelocity.rotate(this.angle);
     }
 
