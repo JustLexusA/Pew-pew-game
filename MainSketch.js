@@ -1,5 +1,9 @@
 function preload() {
+<<<<<<< HEAD
+	img = loadImage('Textures/images (1).jpg')
+=======
 	arenasurface = loadImage('Textures/grass.jpg')
+>>>>>>> ebb84af4a14c621f91c19786a00bf96f9408a8ff
 }
 
 function setup() {
