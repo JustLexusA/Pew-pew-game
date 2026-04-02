@@ -6,20 +6,22 @@ function Arena() {
 	rect( leftwall, roof, ArenaWidth, ArenaHeight)
 
 	imageMode(CENTER)
-	image(img, leftwall, roof, ArenaWidth, ArenaHeight)
+	image(arenasurface, leftwall, roof, ArenaWidth, ArenaHeight)
 	pop()
 
-	if (keyIsDown(187)) {
+	// Press '+' to increase the size of the arena
+	if (keyIsDown(187)) { // '+' key
 		if (ArenaWidth < windowWidth * 0.95 && ArenaHeight < windowHeight * 0.95) {
-			ArenaWidth += 2
-			ArenaHeight += 2
+			ArenaWidth += 5;
+			ArenaHeight += 5;
 		}
 	}
 
-	if (keyIsDown(189)) {
-		if (ArenaWidth > windowWidth * 0.05 && ArenaHeight > windowHeight * 0.05) {
-			ArenaWidth -= 2
-			ArenaHeight -= 2
+	// Press '-' to decrease the size of the arena
+	if (keyIsDown(189)) { // '-' key
+		if (ArenaWidth > windowWidth * 0.5 && ArenaHeight > windowHeight * 0.5) {
+			ArenaWidth -= 5;
+			ArenaHeight -= 5;
 		}
 	}
 }
