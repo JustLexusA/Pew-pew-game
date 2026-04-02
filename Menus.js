@@ -5,9 +5,17 @@ function startMenu() {
 			mouseY > windowHeight / 2 - 50 && mouseY < windowHeight / 2 + 50) {
 			buttonColour = color(225, 225, 225);
 		}
+
+		// The title of the game: Balls Galore
+		fill('white');
+		textSize(50);
+		textAlign(CENTER, CENTER);
+		text("Balls Galore", windowWidth / 2, windowHeight / 4);
+
+		// Draw the start button
 		fill(buttonColour);
 		rectMode(CENTER)
-		rect(windowWidth / 2, windowHeight / 2, 200, 100);
+		rect(windowWidth / 2, windowHeight / 2, 200, 100, 10);
 		fill('black')
 		textSize(20);
 		textAlign(CENTER, CENTER);
