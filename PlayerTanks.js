@@ -5,7 +5,7 @@ class playerTank extends tank {
         this.down = down;
         this.left = left;
         this.right = right;
-        //this.shoot = 32; // Spacebar
+        this.attack = 32; // Spacebar
     }
 
     update() {
@@ -28,10 +28,16 @@ class playerTank extends tank {
         if (keyIsDown(this.right)) {
             this.angle += this.rotationSpeed;
         }
-        //if (keyIsDown(this.shoot)) {
-        //    // Shoot Bullet
-        //}
+        if (keyIsDown(this.shoot)) {
+           this.useWeapon();
+        }
         tankVelocity.rotate(this.angle);
+    }
+
+    useWeapon() {
+        if (weapon == bullet) {
+            bullet.push(new bullet(this.pos.x, this.pos.y, this.angle));
+        }
     }
 
     checkWalls() {

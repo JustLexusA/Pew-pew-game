@@ -2,7 +2,7 @@ function setVariables() {
     gameMode = 0;
     // Arena variables
     ArenaWidth = windowWidth;
-    ArenaHeight = windowHeight;
+    ArenaHeight = windowHeight
     leftwall = windowWidth / 2;
     roof = windowHeight / 2;
 
@@ -16,16 +16,19 @@ function setVariables() {
 	);
 }
 
-let gameMode
-// let start = 0
-// let gameplay = 1
-// let pause = 'Paused'
-// let shop = 2
-
+// Tank Variables
 let tanks = []
 let playerTanks = []
 let defaultRotationSpeed;
 let tankVelocity
+
+// Weapon Variables
+let weapon = 1
+let bullet = 1
+let laser = 2
+
+// Game Modes
+let gameMode
 const start = 0
 const gameplay = 1
 const pause = 2
