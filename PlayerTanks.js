@@ -17,10 +17,10 @@ class playerTank extends tank {
 
     checkKeys() {
         if (keyIsDown(this.up)) {
-            tankVelocity.y -= 2;
+            tankVelocity.y -= 4;
         }
         if (keyIsDown(this.down)) {
-            tankVelocity.y += 2;
+            tankVelocity.y += 4;
         }
         if (keyIsDown(this.left)) {
             this.angle -= this.rotationSpeed;
