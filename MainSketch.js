@@ -9,13 +9,13 @@ function draw() {
 	clear();
 	background('white')
 
-	// this draws tanks, put in correct gamemode
-	tanks.forEach(tank => {
-		tank.draw();
-		tank.update();
-	});
-
 	// startMenu()
 	// gameplayScreen()
 	// pauseScreen()
 }
+
+// Use this to make tanks appear, put in gamemode
+//tanks.forEach(tank => {
+//	tank.draw();
+//	tank.update();
+//});

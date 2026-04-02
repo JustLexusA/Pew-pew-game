@@ -15,6 +15,7 @@ function startMenu() {
 	}
 }
 
+
 function mousePressed() {
 	if (gameMode == 0) {
 		if (mouseX > windowWidth / 2 - 100 && mouseX < windowWidth / 2 + 100 &&
@@ -25,37 +26,25 @@ function mousePressed() {
 }
 
 function gameplayScreen() {
-	if (gameMode == gameplay) {
-				background(100);
-				fill('black');
-				textSize(30);
-				textAlign(CENTER, CENTER);
-				text("Gameplay Screen", windowWidth / 2, windowHeight / 2);
-				textSize(20);
-				text("Press 'P' to Pause", windowWidth / 2, windowHeight / 2 + 40);
-		
-			function keyPressed() {
-				if (key === 'P' || key === 'p') {
-					gameMode = pause;
-				}
-		}
-	}
+	background(100);
+	fill('black');
+	textSize(30);
+	textAlign(CENTER, CENTER);
+	text("Gameplay Screen", windowWidth / 2, windowHeight / 2);
+	
+	// Press 'P' to pause the game
+	textSize(20);
+	text("Press 'P' to pause the game", windowWidth / 2, windowHeight / 2 + 40);
+	// Draws the arena
+	Arena();
 }
 
 function pauseScreen() {
-	if (gameMode == pause) {
-		background(150);
-		fill('black');
-		textSize(30);
-		textAlign(CENTER, CENTER);
-		text("Game Paused", windowWidth / 2, windowHeight / 2);
-		textSize(20);
-		text("Press 'P' to Resume", windowWidth / 2, windowHeight / 2 + 40);
-
-		function keyPressed() {
-			if (key === 'P' || key === 'p') {
-				gameMode = gameplay;
-			}
-		}
-	}
+	background(150);
+	fill('black');
+	textSize(30);
+	textAlign(CENTER, CENTER);
+	text("Game Paused", windowWidth / 2, windowHeight / 2);	
+	textSize(20);
+	text("Press 'P' to resume the game", windowWidth / 2, windowHeight / 2 + 40);
 }
