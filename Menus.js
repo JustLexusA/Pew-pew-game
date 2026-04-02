@@ -6,11 +6,11 @@ function startMenu() {
 			buttonColour = color(225, 225, 225);
 		}
 
-		// The title of the game: Balls Galore
+		// The title of the game: Tanks Galore
 		fill('white');
 		textSize(50);
 		textAlign(CENTER, CENTER);
-		text("Balls Galore", windowWidth / 2, windowHeight / 4);
+		text("Tanks Galore", windowWidth / 2, windowHeight / 4);
 
 		// Draw the start button
 		fill(buttonColour);

@@ -10,16 +10,16 @@ function Arena() {
 	pop()
 
 	if (keyIsDown(187)) {
-		if (w + 2 <= 800 && h + 2 <= 800) {
-			w += 2
-			h += 2
+		if (ArenaWidth < windowWidth * 0.95 && ArenaHeight < windowHeight * 0.95) {
+			ArenaWidth += 2
+			ArenaHeight += 2
 		}
 	}
 
 	if (keyIsDown(189)) {
-		if (w - 2 >= 500 && h - 2 >= 500) {
-			w -= 2
-			h -= 2
+		if (ArenaWidth > windowWidth * 0.05 && ArenaHeight > windowHeight * 0.05) {
+			ArenaWidth -= 2
+			ArenaHeight -= 2
 		}
 	}
 }

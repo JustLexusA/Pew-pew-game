@@ -1,5 +1,5 @@
 function preload() {
-	img = loadImage('images (1).jpg')
+	img = loadImage('Textures/images (1).jpg')
 }
 
 function setup() {
@@ -18,7 +18,7 @@ function draw() {
 	// startMenu()
 	// gameplayScreen()
 	// pauseScreen()
-
+	upgrades ()
 
 	
 	
