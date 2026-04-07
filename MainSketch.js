@@ -6,6 +6,7 @@ function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(100);
 	rectMode(CENTER);
+	angleMode(DEGREES);
 	setVariables();
 }
 
