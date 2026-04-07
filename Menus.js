@@ -7,7 +7,7 @@ function startMenu() {
 		}
 
 		// The title of the game: Tanks Galore
-		fill('white');
+		fill('Black');
 		textSize(50);
 		textAlign(CENTER, CENTER);
 		text("Tanks Galore", windowWidth / 2, windowHeight / 4);

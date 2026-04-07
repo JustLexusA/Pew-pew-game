@@ -1,5 +1,5 @@
 ## Pew-pew-game
-game name: Balls Galore (might change)
+game name: tanks Galore 
 
 # To-do-list
  - [ ] start screen
@@ -10,7 +10,7 @@ game name: Balls Galore (might change)
         - [x] sound
             - [x] bullet
                 - [x] hit   universfield-powerful-cannon-shot-02-487887.mp3
-                - [x] launch      freesound_community-cannon-explosion-39434.mp3
+                - [x] Shoot      freesound_community-cannon-explosion-39434.mp3
             - [x] tank 
                 - [x] movement    freesound_community-driving-tank-engine-88503.mp3
                 - [x] explode    lumora_studios-pixel-explosion-319166.mp3
@@ -19,15 +19,16 @@ game name: Balls Galore (might change)
  - [ ] 2 players (vectors)
  - [ ] Classes
     - [ ] Barriers/walls
-    - [ ] tanks
-        - [ ] Enemies
-            - [ ] 10 hp, 1000 boss hp
-        - [ ] players
-            - [ ] 10 hp
-    - [ ] Bullets
+    - [x] tanks
+        - [x] Enemies
+            - [x] starting hp - 10 hp, 1000 boss hp
+        - [x] players
+            - [x] 10 hp
+    - [x] Bullets
     - [ ] tempory Buff orbs (speed, atk, additioanl hp | optional )
 - [ ] Upgrades
     - [ ] Seperate currency
+        - [ ] currency = % of hp of enemies/boss
     - [ ] general
         - [ ] atk increase
         - [ ] atk speed increase
