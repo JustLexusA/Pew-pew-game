@@ -7,6 +7,11 @@ function preload() {
 	bulletShoot = loadSound('Sounds/freesound_community-cannon-explosion-39434.mp3')
 	BulletHit = loadSound('Sounds/universfield-powerful-cannon-shot-02-487887.mp3')
 
+
+
+	// if (!mysoundThrust.isPlaying()) { helps with limiting the sound to one at a time, but it is still buggy and can cause the sound to stop playing if the key is pressed too fast
+	// 		mysoundThrust.play()
+	// 	}
 }
 
 function setup() {
