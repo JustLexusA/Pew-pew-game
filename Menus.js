@@ -49,6 +49,12 @@ function gameplayScreen() {
 		tank.draw();
 		tank.update();
 	});
+
+	missles.forEach(missle => {
+	missle.draw();
+	missle.update();
+	missle.Inputs();
+	});
 }
 
 function pauseScreen() {

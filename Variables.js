@@ -12,7 +12,7 @@ function setVariables() {
 		new tank('red', 200, 100, 10),
 		new tank('green', 300, 100, 10),
 		new tank('yellow', 400, 100, 10),
-		new playerTank(87, 83, 65, 68, 'cyan', 500, 100, 10),
+		new playerTank(87, 83, 65, 68,  32, 'cyan', 500, 100, 10),
 	);
 }
 
@@ -24,6 +24,7 @@ let gameMode
 
 let tanks = []
 let playerTanks = []
+let missles = []
 let defaultRotationSpeed;
 let tankVelocity
 const start = 0

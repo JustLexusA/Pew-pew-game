@@ -1,10 +1,12 @@
 class playerTank extends tank {
-    constructor(up, down, left, right, color, x, y, health, size = 50) {
+    constructor(up, down, left, right, shoot, color, x, y, health, size = 50, shootCooldown = 0) {
         super(color, x, y, health, size);
         this.up = up;
         this.down = down;
         this.left = left;
         this.right = right;
+        this.shoot = shoot;
+        this.shootCooldown = shootCooldown;
     }
 
     update() {
@@ -12,6 +14,7 @@ class playerTank extends tank {
         this.checkKeys();
         this.checkWalls();
         this.updatePosition();
+        this.shootCooldown = max(0, this.shootCooldown - 1); // Decrease cooldown
     }
 
     checkKeys() {
@@ -28,6 +31,15 @@ class playerTank extends tank {
             this.angle += this.rotationSpeed;
         }
         tankVelocity.rotate(this.angle);
+
+        if (keyIsDown(this.shoot) && this.shootCooldown <= 0) {
+            // Create a new missle at the tank's position and angle
+            let missle = new Missles(this.pos.x, this.pos.y, this.angle - PI / 2);
+            missles.push(missle);
+            
+            // Resets cooldown (if implemented)
+            this.shootCooldown = 30; // Example cooldown of 30 frames
+        }
     }
 
     checkWalls() {
