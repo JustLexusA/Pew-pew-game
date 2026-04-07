@@ -20,6 +20,26 @@ function startMenu() {
 		textSize(20);
 		textAlign(CENTER, CENTER);
 		text("Start Game", windowWidth / 2, windowHeight / 2);
+
+		//Game mode
+		fill(buttonColour);
+		rectMode(CENTER)
+		rect(windowWidth / 3, windowHeight / 1.5, 200, 100, 10);
+
+		//options
+		fill(buttonColour);
+		rectMode(CENTER)
+		rect(windowWidth / 3, windowHeight / 1.2, 200, 100, 10);
+
+		// //players
+		// fill(buttonColour);
+		// rectMode(CENTER)
+		// rect(windowWidth / 1.5, windowHeight / 1.5, 200, 100, 10);
+
+		// //Volume
+		// fill(buttonColour);
+		// rectMode(CENTER)
+		// rect(windowWidth / 1.5, windowHeight / 1.2, 200, 100, 10);
 	}
 }
 
