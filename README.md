@@ -5,8 +5,8 @@ game name: tanks Galore
  - [ ] start screen
     - [ ] gamemodes + button
         - [ ] endless
-    - [ ] options + button
-        - [ ] friendly fire
+    - [x] options + button
+        - [ ] friendly fire - optional
         - [x] sound
             - [x] bullet
                 - [x] hit   universfield-powerful-cannon-shot-02-487887.mp3

@@ -22,11 +22,20 @@ let gameMode
 // let pause = 'Paused'
 // let shop = 2
 
+// Tank variables
 let tanks = []
 let playerTanks = []
 let missles = []
 let defaultRotationSpeed;
 let tankVelocity
+let forward = false
+let down = false
+let left = false
+let right = false
+let shoot = false
+
+
+// screen varibles
 const start = 0
 const gameplay = 1
 const pause = 2
