@@ -21,25 +21,54 @@ function startMenu() {
 		textAlign(CENTER, CENTER);
 		text("Start Game", windowWidth / 2, windowHeight / 2);
 
+	}
+	if (gameMode == 0) {
+		buttonColour = color(200, 200, 200);
+		if (mouseX > windowWidth / 2.45 - 100 && mouseX < windowWidth / 2.45 + 100 &&
+			mouseY > windowHeight / 1.5 - 50 && mouseY < windowHeight / 1.5 + 50) {
+			buttonColour = color(225, 225, 225);
+		}
+
 		//Game mode
 		fill(buttonColour);
 		rectMode(CENTER)
-		rect(windowWidth / 3, windowHeight / 1.5, 200, 100, 10);
+		rect(windowWidth / 2.45, windowHeight / 1.5, 200, 100, 10);
+	}
+	if (gameMode == 0) {
+		buttonColour = color(200, 200, 200);
+		if (mouseX > windowWidth / 2.45 - 100 && mouseX < windowWidth / 2.45 + 100 &&
+			mouseY > windowHeight / 1.2 - 50 && mouseY < windowHeight / 1.2 + 50) {
+			buttonColour = color(225, 225, 225);
+		}
 
 		//options
 		fill(buttonColour);
 		rectMode(CENTER)
-		rect(windowWidth / 3, windowHeight / 1.2, 200, 100, 10);
+		rect(windowWidth / 2.45, windowHeight / 1.2, 200, 100, 10);
+	}
+	if (gameMode == 0) {
+		buttonColour = color(200, 200, 200);
+		if (mouseX > windowWidth / 1.7 - 100 && mouseX < windowWidth / 1.7 + 100 &&
+			mouseY > windowHeight / 1.5 - 50 && mouseY < windowHeight / 1.5 + 50) {
+			buttonColour = color(225, 225, 225);
+		}
 
 		// //players
-		// fill(buttonColour);
-		// rectMode(CENTER)
-		// rect(windowWidth / 1.5, windowHeight / 1.5, 200, 100, 10);
+		fill(buttonColour);
+		rectMode(CENTER)
+		rect(windowWidth / 1.7, windowHeight / 1.5, 200, 100, 10);
+	}	
+	if (gameMode == 0) {
+		buttonColour = color(200, 200, 200);
+		if (mouseX > windowWidth / 1.7 - 100 && mouseX < windowWidth / 1.7 + 100 &&
+			mouseY > windowHeight / 1.2 - 50 && mouseY < windowHeight / 1.2 + 50) {
+			buttonColour = color(225, 225, 225);
+		}
 
 		// //Volume
-		// fill(buttonColour);
-		// rectMode(CENTER)
-		// rect(windowWidth / 1.5, windowHeight / 1.2, 200, 100, 10);
+		fill(buttonColour);
+		rectMode(CENTER)
+		rect(windowWidth / 1.7, windowHeight / 1.2, 200, 100, 10);
 	}
 }
 
