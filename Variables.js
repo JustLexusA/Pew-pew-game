@@ -8,11 +8,9 @@ function setVariables() {
 
 	defaultRotationSpeed = QUARTER_PI / 15;
 	tanks.push(
-		new tank('blue', 100, 100, 10),
-		new tank('red', 200, 100, 10),
-		new tank('green', 300, 100, 10),
-		new tank('yellow', 400, 100, 10),
+		// new playerTank(up, down, left, right, shoot, colour, x, y, shootCooldown)
 		new playerTank(87, 83, 65, 68,  32, 'cyan', 500, 100, 10),
+		new playerTank(38, 40, 37, 39, 190, 'magenta', 500, 300, 10)
 	);
 }
 
