@@ -89,6 +89,8 @@ function startMenu() {
 }
 
 
+
+
 function mousePressed() {
 	if (gameMode == 0) {
 		if (mouseX > windowWidth / 2 - 100 && mouseX < windowWidth / 2 + 100 &&
