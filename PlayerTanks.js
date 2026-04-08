@@ -18,17 +18,25 @@ class playerTank extends tank {
     }
 
     checkKeys() {
+        //Up
         if (keyIsDown(this.up)) {
             tankVelocity.y -= 4;
+            forward = true
         }
+        //Down
         if (keyIsDown(this.down)) {
             tankVelocity.y += 4;
+            down = true
         }
+        //Left
         if (keyIsDown(this.left)) {
             this.angle -= this.rotationSpeed;
+            left = true
         }
+        //Right
         if (keyIsDown(this.right)) {
             this.angle += this.rotationSpeed;
+            right = true 
         }
         tankVelocity.rotate(this.angle);
 
@@ -73,4 +81,50 @@ class playerTank extends tank {
     updatePosition() {
         this.pos.add(tankVelocity);
     }
+}
+
+function soundSetup() {
+
+	// if (forward) {
+
+	// 	Thrusting = true;
+
+	// 	if (!mysoundThrust.isPlaying()) {
+	// 		mysoundThrust.play()
+	
+	// 	} else {
+	// 		Thrusting = false;
+	// 	}
+	// }
+
+	// if (down) {
+
+	// 	Thrusting = true;
+
+
+	// 	if (!mysoundThrust.isPlaying()) {
+	// 		mysoundThrust.play()
+
+	// 	} else {
+	// 		Thrusting = false;
+	// 	}
+	// }
+	// if (left) {
+
+	// 	Thrusting = true;
+
+	
+	
+	// } else {
+	// 	Thrusting = false;
+	// }
+	// if (right) {
+
+	// 	Thrusting = true;
+
+	
+	
+	// } else {
+	// 	Thrusting = false;
+	// }
 }

@@ -5,8 +5,8 @@ game name: tanks Galore
  - [ ] start screen
     - [ ] gamemodes + button
         - [ ] endless
-    - [ ] options + button
-        - [ ] friendly fire
+    - [x] options + button
+        - [ ] friendly fire - optional
         - [x] sound
             - [x] bullet
                 - [x] hit   universfield-powerful-cannon-shot-02-487887.mp3
@@ -14,6 +14,8 @@ game name: tanks Galore
             - [x] tank 
                 - [x] movement    freesound_community-driving-tank-engine-88503.mp3
                 - [x] explode    lumora_studios-pixel-explosion-319166.mp3
+    - [x] Volume button + button
+    - [x] players button + button
  - [x] Arena
  - [ ] Starting screen
  - [ ] 2 players (vectors)
