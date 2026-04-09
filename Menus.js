@@ -112,16 +112,6 @@ function gameplayScreen() {
 	text("Press 'P' to pause the game", windowWidth / 2, windowHeight / 2 + 40);
 	// Draws the arena
 	Arena();
-	tanks.forEach(tank => {
-		tank.draw();
-		tank.update();
-	});
-
-	missles.forEach(missle => {
-	missle.draw();
-	missle.update();
-	missle.Inputs();
-	});
 }
 
 function pauseScreen() {
