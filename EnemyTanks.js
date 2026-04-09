@@ -29,14 +29,19 @@ class enemyTank extends tank {
 
         this.angle = this.normalizeAngle(this.angle);
         this.relativePlayerAngle = this.normalizeAngle(this.targetAngle - this.angle);
+
+        if (Math.abs(this.angleDifference) <= 5) {
+            return true;
+        }
     }
     
     moveTowardsPlayer() {
         this.distanceToPlayer = this.pos.dist(this.closestPlayer.pos);
         if (this.distanceToPlayer > 250) {
             this.tankVelocity.rotate(this.angle);
-            text("here", this.pos.x, this.pos.y - this.size)
             this.pos.add(this.tankVelocity);
+        } else {
+            return true;
         }
     }
     
