@@ -33,6 +33,7 @@ let down = false
 let left = false
 let right = false
 let shoot = false
+let soundTank
 
 
 // screen varibles
