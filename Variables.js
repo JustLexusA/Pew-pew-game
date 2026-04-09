@@ -7,6 +7,7 @@ function setVariables() {
     roof = windowHeight / 2;
 
 	defaultRotationSpeed = 4;
+	defualtTankVelocity = createVector(0, 1);
 	playerTanks.push(
 		new playerTank(87, 83, 65, 68, 'cyan', 500, 100, 10),
 	);
@@ -24,7 +25,8 @@ let gameMode
 let playerTanks = []
 let enemyTanks = []
 let defaultRotationSpeed;
-let tankVelocity
+let defualtTankVelocity;
+let tankVelocity = defualtTankVelocity;
 const start = 0
 const gameplay = 1
 const pause = 2
