@@ -9,18 +9,18 @@ function Arena() {
 	image(arenasurface, leftwall, roof, ArenaWidth - 30, ArenaHeight - 30)
 	pop()
 
-	// Draws the tanks and missles
-	tanks.forEach(tank => {
+		playerTanks.forEach(tank => {
+		tank.draw();
+		tank.update();
+	});
+	enemyTanks.forEach(tank => {
 		tank.draw();
 		tank.update();
 	});
 
-	missles.forEach((missle, index) => {
-		missle.draw();
-		missle.update();	
+	missles.forEach(missle => {
+	missle.draw();
+	missle.update();
+	missle.Inputs();
 	});
-
-	// Remove missles that are out of bounds
-	missles = missles.filter(missle => missle.Inputs());
-
 }

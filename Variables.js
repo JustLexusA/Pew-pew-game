@@ -6,10 +6,13 @@ function setVariables() {
     leftwall = windowWidth / 2;
     roof = windowHeight / 2;
 
-	defaultRotationSpeed = 4;
+	defaultRotationSpeed = 2;
 	defualtTankVelocity = createVector(0, 1);
+
+	
 	playerTanks.push(
-		new playerTank(87, 83, 65, 68, 'cyan', 500, 100, 10),
+		// new playerTank(up, down, left, right, shoot, color, x, y, health)
+		new playerTank(87, 83, 65, 68, 32, 'cyan', 500, 100, 10),
 	);
 	enemyTanks.push(
 		new enemyTank('red', 400, 400, 10)
@@ -23,6 +26,7 @@ let gameMode
 // let shop = 2
 
 let playerTanks = []
+let missles = []
 let enemyTanks = []
 let defaultRotationSpeed;
 let defualtTankVelocity;

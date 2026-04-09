@@ -21,28 +21,28 @@ class playerTank extends tank {
         //Up
         if (keyIsDown(this.up)) {
             tankVelocity.y -= 4;
-            forward = true
+            // forward = true
         }
         //Down
         if (keyIsDown(this.down)) {
             tankVelocity.y += 4;
-            down = true
+            // down = true
         }
         //Left
         if (keyIsDown(this.left)) {
             this.angle -= this.rotationSpeed;
-            left = true
+            // left = true
         }
         //Right
         if (keyIsDown(this.right)) {
             this.angle += this.rotationSpeed;
-            right = true 
+            // right = true 
         }
         tankVelocity.rotate(this.angle);
 
         if (keyIsDown(this.shoot) && this.shootCooldown <= 0) {
             // Create a new missle at the tank's position and angle
-            let missle = new Missles(this.pos.x, this.pos.y, this.angle - PI / 2);
+            let missle = new Missles(this.pos.x, this.pos.y, this.angle - 90);
             missles.push(missle);
             
             // Resets cooldown (if implemented)

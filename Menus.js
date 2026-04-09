@@ -112,23 +112,20 @@ function gameplayScreen() {
 	text("Press 'P' to pause the game", windowWidth / 2, windowHeight / 2 + 40);
 	// Draws the arena
 	Arena();
-<<<<<<< HEAD
-=======
-	playerTanks.forEach(tank => {
-		tank.draw();
-		tank.update();
-	});
-	enemyTanks.forEach(tank => {
-		tank.draw();
-		tank.update();
-	});
+	// playerTanks.forEach(tank => {
+	// 	tank.draw();
+	// 	tank.update();
+	// });
+	// enemyTanks.forEach(tank => {
+	// 	tank.draw();
+	// 	tank.update();
+	// });
 
-	missles.forEach(missle => {
-	missle.draw();
-	missle.update();
-	missle.Inputs();
-	});
->>>>>>> 9e19552a4b7f3632ef700618f7312c7604542619
+	// missles.forEach(missle => {
+	// missle.draw();
+	// missle.update();
+	// missle.Inputs();
+	// });
 }
 
 function pauseScreen() {
