@@ -6,11 +6,13 @@ function setVariables() {
     leftwall = windowWidth / 2;
     roof = windowHeight / 2;
 
-	defaultRotationSpeed = QUARTER_PI / 15;
-	tanks.push(
-		// new playerTank(up, down, left, right, shoot, colour, x, y, shootCooldown)
-		new playerTank(87, 83, 65, 68,  32, 'cyan', 500, 100, 10),
-		new playerTank(38, 40, 37, 39, 190, 'magenta', 500, 300, 10)
+	defaultRotationSpeed = 4;
+	defualtTankVelocity = createVector(0, 1);
+	playerTanks.push(
+		new playerTank(87, 83, 65, 68, 'cyan', 500, 100, 10),
+	);
+	enemyTanks.push(
+		new enemyTank('red', 400, 400, 10)
 	);
 }
 
@@ -20,27 +22,17 @@ let gameMode
 // let pause = 'Paused'
 // let shop = 2
 
-// Tank variables
-let tanks = []
 let playerTanks = []
-let missles = []
+let enemyTanks = []
 let defaultRotationSpeed;
-let tankVelocity
-let forward = false
-let down = false
-let left = false
-let right = false
-let shoot = false
-
-
-// screen varibles
+let defualtTankVelocity;
+let tankVelocity = defualtTankVelocity;
 const start = 0
 const gameplay = 1
 const pause = 2
 const shop = 3
 
 // Arena
-
 let ArenaWidth;
 let ArenaHeight;
 let arenasurface;

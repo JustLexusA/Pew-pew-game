@@ -3,7 +3,7 @@ class tank {
         this.color = color;
         this.pos = createVector(x, y);
         this.health = health;
-        this.angle = random(0, TWO_PI);
+        this.angle = random(0, 360);
         this.size = size;
         this.width = size / 2;
         this.height = size;
