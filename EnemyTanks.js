@@ -1,12 +1,12 @@
 class enemyTank extends tank {
     constructor(color, x, y, health, size = 50) {
         super(color, x, y, health, size);
-        this.angle = 0;
         this.tankVelocity = defualtTankVelocity
         this.rotationSpeed /= 4;
     }
 
     update() {
+        super.checkStaticCollisions();
         this.angleDifference;
         this.lookAtPlayer();
         this.tankVelocity = defualtTankVelocity.copy();

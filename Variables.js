@@ -12,10 +12,13 @@ function setVariables() {
 	
 	playerTanks.push(
 		// new playerTank(up, down, left, right, shoot, color, x, y, health)
-		new playerTank(87, 83, 65, 68, 32, 'cyan', 500, 100, 10),
+		new playerTank(87, 83, 65, 68, 32, 'cyan', 500, 100, 10)
 	);
 	enemyTanks.push(
-		new enemyTank('red', 400, 400, 10)
+		new enemyTank('red', -10, -10, 10)
+	);
+	barriers.push(
+		new barrier(createVector(200, 200), 300, 90)
 	);
 }
 
@@ -25,9 +28,11 @@ let gameMode
 // let pause = 'Paused'
 // let shop = 2
 
+let barriers = []
 let playerTanks = []
 let missles = []
 let enemyTanks = []
+let defaultBarrierWidth = 10
 let defaultRotationSpeed;
 let defualtTankVelocity;
 let tankVelocity = defualtTankVelocity;
