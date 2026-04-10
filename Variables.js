@@ -26,7 +26,8 @@ let gameMode
 // let shop = 2
 
 let playerTanks = []
-let missles = []
+let playerMissles = []
+let enemyMissles = []
 let enemyTanks = []
 let defaultRotationSpeed;
 let defualtTankVelocity;
