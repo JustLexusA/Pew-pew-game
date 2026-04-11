@@ -42,8 +42,8 @@ class playerTank extends tank {
 
         if (keyIsDown(this.shoot) && this.shootCooldown <= 0) {
             // Create a new missle at the tank's position and angle
-            let missle = new Missles(this.pos.x, this.pos.y, this.angle - 90);
-            missles.push(missle);
+            let missle = new playerMissle(this.pos.x, this.pos.y, this.angle - 90);
+            playerMissles.push(missle);
             
             // Resets cooldown (if implemented)
             this.shootCooldown = 30; // Example cooldown of 30 frames

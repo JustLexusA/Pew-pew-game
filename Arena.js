@@ -13,16 +13,26 @@ function Arena() {
 		tank.draw();
 		tank.update();
 	});
+  
 	enemyTanks.forEach(tank => {
 		tank.draw();
 		tank.update();
+		tank.shoot();
 	});
+  
 	barriers.forEach(barrier => {
 		barrier.draw();
 	});
-	missles.forEach(missle => {
-		missle.draw();
-		missle.update();
-		missle.Inputs();
+
+	playerMissles.forEach(playerMissle => {
+		playerMissle.draw();
+		playerMissle.update();
+		playerMissle.Inputs();
+	});
+
+	enemyMissles.forEach(enemyMissle => {
+		enemyMissle.draw();
+		enemyMissle.update();
+		enemyMissle.Inputs();
 	});
 }

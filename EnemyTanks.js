@@ -1,8 +1,9 @@
 class enemyTank extends tank {
-    constructor(color, x, y, health, size = 50) {
+    constructor(color, x, y, health, size = 50, shootCooldown = 0) {
         super(color, x, y, health, size);
         this.tankVelocity = defualtTankVelocity
         this.rotationSpeed /= 4;
+        this.shootCooldown = shootCooldown;
     }
 
     update() {
@@ -13,6 +14,7 @@ class enemyTank extends tank {
         if (Math.abs(this.angleDifference) <= 5) {
             this.moveTowardsPlayer();
         }
+        this.shootCooldown = max(0, this.shootCooldown - 1); // Decrease cooldown
     }
 
     lookAtPlayer() {
@@ -62,5 +64,16 @@ class enemyTank extends tank {
         while (angle > 180) angle -= 360;
         while (angle < -180) angle += 360;
         return angle;
+    }
+    // Shoot at player when in range and facing them
+    shoot() {
+            // Checks if player is within 10 degrees and 300 pixels, and if cooldown is 0  
+        if (this.relativePlayerAngle < 10 && this.relativePlayerAngle > -10 && this.closestPlayerDistance < 300 && this.shootCooldown <= 0) {
+            this.shootCooldown = 60; // Set cooldown
+            let missle = new enemyMissle(this.pos.x, this.pos.y, this.angle + 90);
+            enemyMissles.push(missle);
+        } else {
+            return false;
+        }
     }
 }

@@ -30,7 +30,8 @@ let gameMode
 
 let barriers = []
 let playerTanks = []
-let missles = []
+let playerMissles = []
+let enemyMissles = []
 let enemyTanks = []
 let defaultBarrierWidth = 10
 let defaultRotationSpeed;
