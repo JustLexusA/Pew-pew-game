@@ -9,14 +9,19 @@ function Arena() {
 	image(arenasurface, leftwall, roof, ArenaWidth - 30, ArenaHeight - 30)
 	pop()
 
-		playerTanks.forEach(tank => {
+	playerTanks.forEach(tank => {
 		tank.draw();
 		tank.update();
 	});
+  
 	enemyTanks.forEach(tank => {
 		tank.draw();
 		tank.update();
 		tank.shoot();
+	});
+  
+	barriers.forEach(barrier => {
+		barrier.draw();
 	});
 
 	playerMissles.forEach(playerMissle => {

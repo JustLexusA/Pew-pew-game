@@ -1,13 +1,13 @@
 class enemyTank extends tank {
     constructor(color, x, y, health, size = 50, shootCooldown = 0) {
         super(color, x, y, health, size);
-        this.angle = 0;
         this.tankVelocity = defualtTankVelocity
         this.rotationSpeed /= 4;
         this.shootCooldown = shootCooldown;
     }
 
     update() {
+        super.checkStaticCollisions();
         this.angleDifference;
         this.lookAtPlayer();
         this.tankVelocity = defualtTankVelocity.copy();
