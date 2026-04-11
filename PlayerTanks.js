@@ -13,7 +13,6 @@ class playerTank extends tank {
         tankVelocity = createVector(0, 0);
         this.checkKeys();
         super.checkStaticCollisions();
-        this.checkBarriers();
         this.updatePosition();
         this.shootCooldown = max(0, this.shootCooldown - 1); // Decrease cooldown
     }
@@ -49,10 +48,6 @@ class playerTank extends tank {
             // Resets cooldown (if implemented)
             this.shootCooldown = 30; // Example cooldown of 30 frames
         }
-    }
-
-    checkBarriers() {
-        return;
     }
 
     updatePosition() {

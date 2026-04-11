@@ -51,25 +51,67 @@ class tank {
         }
     }
 
+    // Agent uses SAT to check collisions between tank and barriers
     checkBarriers() {
         for (let i = 0; i < barriers.length; i++) {
             let barrier = barriers[i];
-            barrier.L1.rotate(barrier.angle).add(barrier.pos);
-            barrier.L2.rotate(barrier.angle).add(barrier.pos);
-            barrier.R1.rotate(barrier.angle).add(barrier.pos);
-            barrier.R2.rotate(barrier.angle).add(barrier.pos);
-            for (let j = 0; j < this.corners.length; j++) {
-                let corner = this.corners[j].rotate(this.angle).add(this.pos);
-            //if (corner.x < 10) {
-            //    this.pos.x = -corner.x + 10;
-            //} else if (corner.x > windowWidth - 10) {
-            //    this.pos.x = windowWidth - corner.x - 10;
-            //}
-            //if (corner.y < 10) {
-            //    this.pos.y = -corner.y + 10;
-            //} else if (corner.y > windowHeight - 10) {
-            //    this.pos.y = windowHeight - corner.y - 10;
-            //}
+            // Get tank's axes (directions of its edges)
+            let tankAxis1 = createVector(1, 0).rotate(this.angle);
+            let tankAxis2 = createVector(0, 1).rotate(this.angle);
+            // Get barrier's axes
+            let barrierAxis1 = createVector(1, 0).rotate(barrier.angle);
+            let barrierAxis2 = createVector(0, 1).rotate(barrier.angle);
+            // List of all axes to check
+            let axes = [tankAxis1, tankAxis2, barrierAxis1, barrierAxis2];
+            // Get tank corners in world coordinates
+            let tankCorners = this.corners.map(c => c.copy().rotate(this.angle).add(this.pos));
+            // Get barrier corners in world coordinates
+            let barrierCorners = barrier.corners.map(c => c.copy().rotate(barrier.angle).add(barrier.pos));
+            // Check for overlap using Separating Axis Theorem
+            let minOverlap = Infinity;
+            let minAxis = null;
+            let collision = true;
+            for (let axis of axes) {
+                // Project tank onto axis
+                let tankMin = Infinity, tankMax = -Infinity;
+                for (let c of tankCorners) {
+                    let proj = c.dot(axis);
+                    tankMin = Math.min(tankMin, proj);
+                    tankMax = Math.max(tankMax, proj);
+                }
+                // Project barrier onto axis
+                let barMin = Infinity, barMax = -Infinity;
+                for (let c of barrierCorners) {
+                    let proj = c.dot(axis);
+                    barMin = Math.min(barMin, proj);
+                    barMax = Math.max(barMax, proj);
+                }
+                // Check if projections overlap
+                if (tankMax < barMin || barMax < tankMin) {
+                    collision = false;
+                    break;
+                } else {
+                    // Calculate overlap amount
+                    let overlap = Math.min(tankMax - barMin, barMax - tankMin);
+                    if (overlap < minOverlap) {
+                        minOverlap = overlap;
+                        minAxis = axis;
+                    }
+                }
+            }
+            if (collision) {
+                // Resolve collision by pushing tank along the axis with minimum overlap
+                let pushVector = minAxis.copy().normalize().mult(minOverlap * 2);  // Over-push to prevent visible penetration
+                // Determine direction: push away from barrier
+                let tankCenterProj = this.pos.dot(minAxis);
+                let barCenterProj = barrier.pos.dot(minAxis);
+                if (tankCenterProj > barCenterProj) {
+                    // Tank is on the positive side, push positive
+                    this.pos.add(pushVector);
+                } else {
+                    // Tank is on the negative side, push negative
+                    this.pos.sub(pushVector);
+                }
             }
         }
     }
