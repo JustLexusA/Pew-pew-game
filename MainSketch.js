@@ -1,6 +1,6 @@
 function preload() {
 	//soundFormats('mp3', 'ogg')
-	arenasurface = loadImage('Textures/grass.jpg')
+	arenasurface = loadImage('Textures/image (28).jpeg')
 	// Tank sounds
 	tankMovement = loadSound('Sounds/freesound_community-driving-tank-engine-88503.mp3')
 	// tankExplode = loadSound('Sounds/lumora_studios-pixel-explosion-319166.mp3')
