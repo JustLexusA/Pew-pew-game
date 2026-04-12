@@ -19,12 +19,6 @@ class playerMissle {
     update() {
         this.x += this.speed * cos(this.angle);
         this.y += this.speed * sin(this.angle);
-
-        // Check for collisions with tanks here (not implemented in this snippet)
-         if (this.checkCollisionWithTanks()) {
-            // Handle collision (e.g., damage tank, destroy missle)
-            this.destroy();
-        }
     }
 
     Inputs() {
@@ -34,8 +28,13 @@ class playerMissle {
         return true; // Missle is still in bounds
     }
 
-
-
+    checkCollision(tank) {
+        let distance = dist(this.x, this.y, tank.pos.x, tank.pos.y);
+        if (distance < this.size / 2 + tank.size / 2) {
+            return true; // Collision detected
+        }
+        return false; // No collision
+    }
 }
 
 class enemyMissle extends playerMissle {
