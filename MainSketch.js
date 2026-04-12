@@ -1,6 +1,6 @@
 function preload() {
 	//soundFormats('mp3', 'ogg')
-	arenasurface = loadImage('Textures/image (28).jpeg')
+	arenasurface = loadImage('Textures/image (29).jpeg')
 	// Tank Textures
 	Player1Red = loadImage('Textures/Image (26).jpeg')
 	Player2Blue = loadImage('Textures/Image (27).jpeg')
