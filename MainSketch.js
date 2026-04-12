@@ -5,7 +5,7 @@ function preload() {
 	Player1Red = loadImage('Textures/Image (26).jpeg')
 	Player2Blue = loadImage('Textures/Image (27).jpeg')
 
-	tankMovement = loadSound('Sounds/freesound_community-driving-tank-engine-88503.mp3')
+	// tankMovement = loadSound('Sounds/freesound_community-driving-tank-engine-88503.mp3')
 	// tankExplode = loadSound('Sounds/lumora_studios-pixel-explosion-319166.mp3')
 	// bulletShoot = loadSound('Sounds/freesound_community-cannon-explosion-39434.mp3')
 	// BulletHit = loadSound('Sounds/universfield-powerful-cannon-shot-02-487887.mp3')
@@ -24,7 +24,7 @@ function setup() {
 	angleMode(DEGREES);
 	setVariables();
 
-	player = new playerTank('w','s', 'a', 'd', 'e', 'red', 100, 100, Player1Red, 100);
+	// player = new playerTank('w','s', 'a', 'd', 'e', 'red', 100, 100, Player1Red, 100);
 }
 
 function draw() {

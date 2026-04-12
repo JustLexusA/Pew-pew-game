@@ -19,6 +19,12 @@ class playerMissle {
     update() {
         this.x += this.speed * cos(this.angle);
         this.y += this.speed * sin(this.angle);
+
+        // Check for collisions with tanks here (not implemented in this snippet)
+         if (this.checkCollisionWithTanks()) {
+            // Handle collision (e.g., damage tank, destroy missle)
+            this.destroy();
+        }
     }
 
     Inputs() {
@@ -29,35 +35,54 @@ class playerMissle {
     }
 
 
+
 }
 
-class enemyMissle {
+class enemyMissle extends playerMissle {
     constructor(x, y, angle) {
-        this.x = x;
-        this.y = y;
-        this.angle = angle;
-        this.speed = 8;
-        this.size = 10;
+        super(x, y, angle);
+        this.speed = 8; // Enemy missles can be slower than player missles
     }
 
     draw() {
         push();
         translate(this.x, this.y);
         rotate(this.angle);
-        fill('red');
+        fill('blue'); // Enemy missles can be a different color
         ellipse(0, 0, this.size);
         pop();
     }
-
-    update() {
-        this.x += this.speed * cos(this.angle);
-        this.y += this.speed * sin(this.angle);
-    }
-
-    Inputs() {
-        if (this.x < 0 || this.x > windowWidth || this.y < 0 || this.y > windowHeight) {
-            return false;
-        }
-        return true;
-    }
 }
+    // The update and Inputs methods are inherited from playerMissle and can be used as is
+
+
+// class enemyMissle {
+//     constructor(x, y, angle) {
+//         this.x = x;
+//         this.y = y;
+//         this.angle = angle;
+//         this.speed = 8;
+//         this.size = 10;
+//     }
+
+//     draw() {
+//         push();
+//         translate(this.x, this.y);
+//         rotate(this.angle);
+//         fill('red');
+//         ellipse(0, 0, this.size);
+//         pop();
+//     }
+
+//     update() {
+//         this.x += this.speed * cos(this.angle);
+//         this.y += this.speed * sin(this.angle);
+//     }
+
+//     Inputs() {
+//         if (this.x < 0 || this.x > windowWidth || this.y < 0 || this.y > windowHeight) {
+//             return false;
+//         }
+//         return true;
+//     }
+// }
