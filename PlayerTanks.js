@@ -1,5 +1,5 @@
 class playerTank extends tank {
-    constructor(up, down, left, right, shoot, color, x, y, health, size = 50, shootCooldown = 0) {
+    constructor(up, down, left, right, shoot, color, x, y, img, health, size = 50, shootCooldown = 0) {
         super(color, x, y, health, size);
         this.up = up;
         this.down = down;
@@ -7,6 +7,7 @@ class playerTank extends tank {
         this.right = right;
         this.shoot = shoot;
         this.shootCooldown = shootCooldown;
+        this.img = img
     }
 
     update() {
@@ -15,6 +16,14 @@ class playerTank extends tank {
         super.checkStaticCollisions();
         this.updatePosition();
         this.shootCooldown = max(0, this.shootCooldown - 1); // Decrease cooldown
+
+        
+        push();
+        translate(this.pos.x, this.pos.y);
+        rotate(this.angle);
+        imageMode(CENTER);
+        image(this.img, 0, 0, this.size, this.size);
+        pop();
     }
 
     checkKeys() {

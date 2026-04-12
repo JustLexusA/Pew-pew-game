@@ -42,6 +42,9 @@ const gameplay = 1
 const pause = 2
 const shop = 3
 
+let Player2Blue;
+let Player1Red;
+
 // Arena
 let ArenaWidth;
 let ArenaHeight;

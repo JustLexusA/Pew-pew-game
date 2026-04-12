@@ -110,6 +110,9 @@ function gameplayScreen() {
 	// Press 'P' to pause the game
 	textSize(20);
 	text("Press 'P' to pause the game", windowWidth / 2, windowHeight / 2 + 40);
+	//player imgs
+	player.update();
+	player.draw();
 	// Draws the arena
 	Arena();
 	// playerTanks.forEach(tank => {
