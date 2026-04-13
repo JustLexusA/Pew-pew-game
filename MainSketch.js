@@ -40,15 +40,24 @@ function draw() {
 	// pauseScreen()
 
 	switch (gameMode) {
+		// if gameMode is 0, show start menu
 		case start:
 			startMenu();
 			break;
+		// if gameMode is 1 and timer is not zero, show gameplay screen
 		case gameplay:
+		case timer < 0:
 			gameplayScreen();
 			break;
+		// if gameMode is 2, show pause screen
 		case pause:
 			pauseScreen();
 			break;
+		// if gameMode is 3, show shop screen
+		case selectionscreen:
+		case timer == 0:
+			selectionScreen();
+			break;	
 		case shop:
 			shopScreen();
 			break;
