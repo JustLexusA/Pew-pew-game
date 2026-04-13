@@ -5,11 +5,11 @@ function startMenu() {
 			mouseY > windowHeight / 2 - 50 && mouseY < windowHeight / 2 + 50) {
 			buttonColour = color(225, 225, 225);
 		}
-
+		
 		// Draw the background using the image		
 		imageMode(CENTER);
 		image(startMenuBackground, windowWidth / 2, windowHeight / 2, windowWidth, windowHeight);
-
+		
 		// Draw the start button
 		fill(buttonColour);
 		rectMode(CENTER)
@@ -18,35 +18,35 @@ function startMenu() {
 		textSize(20);
 		textAlign(CENTER, CENTER);
 		text("Start Game", windowWidth / 2, windowHeight / 2);
-
+		
 	}
 	if (gameMode == 0) {
 		buttonColour = color(200, 200, 200);
 		if (mouseX > windowWidth / 2.45 - 100 && mouseX < windowWidth / 2.45 + 100 &&
 			mouseY > windowHeight / 1.5 - 50 && mouseY < windowHeight / 1.5 + 50) {
-			buttonColour = color(225, 225, 225);
+				buttonColour = color(225, 225, 225);
+			}
+			
+			//Game mode
+			fill(buttonColour);
+			rectMode(CENTER)
+			rect(windowWidth / 2.45, windowHeight / 1.5, 200, 100, 10);
+			fill('black')
+			textSize(20);
+			textAlign(CENTER, CENTER);
+			text("Game Mode", windowWidth / 2.45, windowHeight / 1.5);
 		}
-
-		//Game mode
-		fill(buttonColour);
-		rectMode(CENTER)
-		rect(windowWidth / 2.45, windowHeight / 1.5, 200, 100, 10);
-		fill('black')
-		textSize(20);
-		textAlign(CENTER, CENTER);
-		text("Game Mode", windowWidth / 2.45, windowHeight / 1.5);
-	}
-	if (gameMode == 0) {
-		buttonColour = color(200, 200, 200);
-		if (mouseX > windowWidth / 2.45 - 100 && mouseX < windowWidth / 2.45 + 100 &&
-			mouseY > windowHeight / 1.2 - 50 && mouseY < windowHeight / 1.2 + 50) {
-			buttonColour = color(225, 225, 225);
-		}
-
-		//options
-		fill(buttonColour);
-		rectMode(CENTER)
-		rect(windowWidth / 2.45, windowHeight / 1.2, 200, 100, 10);
+		if (gameMode == 0) {
+			buttonColour = color(200, 200, 200);
+			if (mouseX > windowWidth / 2.45 - 100 && mouseX < windowWidth / 2.45 + 100 &&
+				mouseY > windowHeight / 1.2 - 50 && mouseY < windowHeight / 1.2 + 50) {
+					buttonColour = color(225, 225, 225);
+				}
+				
+				//options
+				fill(buttonColour);
+				rectMode(CENTER)
+				rect(windowWidth / 2.45, windowHeight / 1.2, 200, 100, 10);
 		fill('black')
 		textSize(20);
 		textAlign(CENTER, CENTER);
@@ -56,25 +56,25 @@ function startMenu() {
 		buttonColour = color(200, 200, 200);
 		if (mouseX > windowWidth / 1.7 - 100 && mouseX < windowWidth / 1.7 + 100 &&
 			mouseY > windowHeight / 1.5 - 50 && mouseY < windowHeight / 1.5 + 50) {
-			buttonColour = color(225, 225, 225);
-		}
-
-		// //players
-		fill(buttonColour);
-		rectMode(CENTER)
-		rect(windowWidth / 1.7, windowHeight / 1.5, 200, 100, 10);
-	fill('black')
-		textSize(20);
-		textAlign(CENTER, CENTER);
-		text("Players", windowWidth / 1.7, windowHeight / 1.5);
-	}	
-	if (gameMode == 0) {
-		buttonColour = color(200, 200, 200);
+				buttonColour = color(225, 225, 225);
+			}
+			
+			// //players
+			fill(buttonColour);
+			rectMode(CENTER)
+			rect(windowWidth / 1.7, windowHeight / 1.5, 200, 100, 10);
+			fill('black')
+			textSize(20);
+			textAlign(CENTER, CENTER);
+			text("Players", windowWidth / 1.7, windowHeight / 1.5);
+		}	
+		if (gameMode == 0) {
+			buttonColour = color(200, 200, 200);
 		if (mouseX > windowWidth / 1.7 - 100 && mouseX < windowWidth / 1.7 + 100 &&
 			mouseY > windowHeight / 1.2 - 50 && mouseY < windowHeight / 1.2 + 50) {
 			buttonColour = color(225, 225, 225);
 		}
-
+		
 		// //Volume
 		fill(buttonColour);
 		rectMode(CENTER)
@@ -93,45 +93,50 @@ function mousePressed() {
 	if (gameMode == 0) {
 		if (mouseX > windowWidth / 2 - 100 && mouseX < windowWidth / 2 + 100 &&
 			mouseY > windowHeight / 2 - 50 && mouseY < windowHeight / 2 + 50) {
-			gameMode = gameplay;
+				gameMode = gameplay;
+			}
 		}
 	}
-}
 
-function gameplayScreen() {
-	background(100);
-	fill('black');
-	textSize(30);
-	textAlign(CENTER, CENTER);
-	text("Gameplay Screen", windowWidth / 2, windowHeight / 2);
-	
-	// Press 'P' to pause the game
-	textSize(20);
-	text("Press 'P' to pause the game", windowWidth / 2, windowHeight / 2 + 40);
-	//player imgs
-	// player.update();
-	// player.draw();
-	// Draws the arena
-	Arena();
-	// playerTanks.forEach(tank => {
-	// 	tank.draw();
-	// 	tank.update();
-	// });
-	// enemyTanks.forEach(tank => {
-	// 	tank.draw();
-	// 	tank.update();
-	// });
-
-	// missles.forEach(missle => {
-	// missle.draw();
-	// missle.update();
-	// missle.Inputs();
-	// });
-}
-
-function pauseScreen() {
-	background(150);
-	fill('black');
+	function gameplayScreen() {
+		background(100);
+		fill('black');
+		textSize(30);
+		textAlign(CENTER, CENTER);
+		text("Gameplay Screen", windowWidth / 2, windowHeight / 2);
+		
+		// Press 'P' to pause the game
+		textSize(20);
+		text("Press 'P' to pause the game", windowWidth / 2, windowHeight / 2 + 40);
+		//player imgs
+		// player.update();
+		// player.draw();
+		// Draws the arena
+		Arena();
+		// playerTanks.forEach(tank => {
+			// 	tank.draw();
+			// 	tank.update();
+			// });
+			// enemyTanks.forEach(tank => {
+				// 	tank.draw();
+				// 	tank.update();
+				// });
+				
+				// missles.forEach(missle => {
+					// missle.draw();
+					// missle.update();
+					// missle.Inputs();
+					// });
+					timer -= 1
+					
+					if (timer <= 0){
+						gameMode = selectionscreen;
+					}
+		}
+		
+		function pauseScreen() {
+			background(150);
+			fill('black');
 	textSize(30);
 	textAlign(CENTER, CENTER);
 	text("Game Paused", windowWidth / 2, windowHeight / 2);	
@@ -140,24 +145,19 @@ function pauseScreen() {
 }
 
 function Shop(){
-	timer -= 1
-
-	if (timer <= 0){
-		gameMode = selectionscreen;
-	}
-
-
-if (gameMode == 3){
-	buttonColour = color(200, 200, 200);
+	
+	
+	if (gameMode == 3){
+		buttonColour = color(200, 200, 200);
 		if (mouseX > windowWidth / 2 - 100 && mouseX < windowWidth / 2 + 100 &&
 			mouseY > windowHeight / 2 - 200 && mouseY < windowHeight / 2 + 200) {
-			buttonColour = color(225, 225, 225);
-			gameMode = shop
-		}
+				buttonColour = color(225, 225, 225);
+				gameMode = shop
+			}
 
-	//Shop
-	textSize(50);
-	textAlign(CENTER, CENTER);
+			//Shop
+			textSize(50);
+			textAlign(CENTER, CENTER);
 	text("Upgrade or Continue?", windowWidth / 2, windowHeight / 2 - 50);
 	fill(buttonColour);
 	rectMode(CENTER)
