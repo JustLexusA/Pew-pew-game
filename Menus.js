@@ -127,6 +127,11 @@ function mousePressed() {
 					// missle.update();
 					// missle.Inputs();
 					// });
+
+		fill('black')
+		textSize(20);
+		textAlign(CENTER, CENTER);
+		text("Next round in :" + timer, windowWidth / 2, 50);
 					timer -= 1
 					
 					if (timer <= 0){
