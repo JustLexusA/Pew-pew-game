@@ -1,5 +1,5 @@
 class playerTank extends tank {
-    constructor(up, down, left, right, shoot, color, x, y, health, size = 50, shootCooldown = 0) {
+    constructor(up, down, left, right, shoot, color, x, y, img, health, size = 50, shootCooldown = 0) {
         super(color, x, y, health, size);
         this.up = up;
         this.down = down;
@@ -7,7 +7,7 @@ class playerTank extends tank {
         this.right = right;
         this.shoot = shoot;
         this.shootCooldown = shootCooldown;
-        // this.img = img
+        this.img = img
     }
 
     update() {
