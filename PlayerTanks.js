@@ -53,6 +53,9 @@ class playerTank extends tank {
             // Create a new missle at the tank's position and angle
             let missle = new playerMissle(this.pos.x, this.pos.y, this.angle - 90);
             playerMissles.push(missle);
+            // if (!mysoundThrust.isPlaying()) {
+            // bulletShoot.play()
+            // }
             
             // Resets cooldown (if implemented)
             this.shootCooldown = 30; // Example cooldown of 30 frames
