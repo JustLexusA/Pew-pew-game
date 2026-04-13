@@ -9,6 +9,14 @@ function Arena() {
 	image(arenasurface, leftwall, roof, ArenaWidth - 30, ArenaHeight - 30)
 	pop()
 
+	fill('black')
+		textSize(20);
+		textAlign(CENTER, CENTER);
+		text("Next round in :" + timer, windowWidth / 22, 100);
+	
+
+	
+
 	playerTanks.forEach(tank => {
 		tank.draw();
 		tank.update();
@@ -35,4 +43,5 @@ function Arena() {
 		enemyMissle.update();
 		enemyMissle.Inputs();
 	});
+
 }

@@ -2,9 +2,8 @@
 game name: tanks Galore 
 
 # To-do-list
- - [ ] start screen
-    - [ ] gamemodes + button
-        - [ ] endless
+ - [x] start screen
+    - [x] gamemodes + button
     - [x] options + button
         - [ ] friendly fire - optional
         - [x] sound
@@ -17,10 +16,10 @@ game name: tanks Galore
     - [x] Volume button + button
     - [x] players button + button
  - [x] Arena
- - [ ] Starting screen
- - [ ] 2 players (vectors)
- - [ ] Classes
-    - [ ] Barriers/walls
+ - [x] Starting screen
+ - [x] 2 players (vectors)
+ - [x] Classes
+    - [x] Barriers/walls
     - [x] tanks
         - [x] Enemies
             - [x] starting hp - 10 hp, 1000 boss hp

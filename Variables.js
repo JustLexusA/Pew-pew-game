@@ -26,7 +26,7 @@ let gameMode
 // let start = 0
 // let gameplay = 1
 // let pause = 'Paused'
-// let shop = 2
+let timer = 60
 
 let barriers = []
 let playerTanks = []
@@ -40,7 +40,8 @@ let tankVelocity = defualtTankVelocity;
 const start = 0
 const gameplay = 1
 const pause = 2
-const shop = 3
+const selectionscreen = 3
+const shop = 4
 
 let Player2Blue;
 let Player1Red;

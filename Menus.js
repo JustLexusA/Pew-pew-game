@@ -138,3 +138,45 @@ function pauseScreen() {
 	textSize(20);
 	text("Press 'P' to resume the game", windowWidth / 2, windowHeight / 2 + 40);
 }
+
+function Shop(){
+	timer -= 1
+
+	if (timer <= 0){
+		gameMode = selectionscreen;
+	}
+
+
+if (gameMode == 3){
+	buttonColour = color(200, 200, 200);
+		if (mouseX > windowWidth / 2 - 100 && mouseX < windowWidth / 2 + 100 &&
+			mouseY > windowHeight / 2 - 200 && mouseY < windowHeight / 2 + 200) {
+			buttonColour = color(225, 225, 225);
+			gameMode = shop
+		}
+
+	//Shop
+	textSize(50);
+	textAlign(CENTER, CENTER);
+	text("Upgrade or Continue?", windowWidth / 2, windowHeight / 2 - 50);
+	fill(buttonColour);
+	rectMode(CENTER)
+	rect(windowWidth / 2 - 75, windowHeight / 2, 100, 200, 10);
+	fill('black')
+	textSize(20);
+	textAlign(CENTER, CENTER);
+	text("Shop", windowWidth / 2 - 75, windowHeight / 2);	
+
+	//continue
+	fill(buttonColour);
+	rectMode(CENTER)
+	rect(windowWidth / 2 + 75, windowHeight / 2, 100, 200, 10);
+	fill('black')
+	textSize(20);
+	textAlign(CENTER, CENTER);
+	text("Continue", windowWidth / 2 + 75, windowHeight / 2);
+}
+if (gameMode == 4){
+	//shop screen
+	}
+}
