@@ -35,9 +35,6 @@ function draw() {
 	clear();
 	background('white')
 
-	// startMenu()
-	// gameplayScreen()
-	// pauseScreen()
 
 	switch (gameMode) {
 		case start:
