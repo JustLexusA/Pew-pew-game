@@ -7,7 +7,7 @@ class playerTank extends tank {
         this.right = right;
         this.shoot = shoot;
         this.shootCooldown = shootCooldown;
-        this.img = img
+        //this.img = img
     }
 
     update() {
@@ -22,7 +22,7 @@ class playerTank extends tank {
         translate(this.pos.x, this.pos.y);
         rotate(this.angle);
         imageMode(CENTER);
-        // image(this.img, 0, 0, this.size, this.size);
+        //image(Player1Red, 0, 0, this.size, this.size);
         pop();
     }
 
