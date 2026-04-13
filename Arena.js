@@ -12,7 +12,7 @@ function Arena() {
 	fill('black')
 		textSize(20);
 		textAlign(CENTER, CENTER);
-		text("Next round in :" + timer, windowWidth / 2, 50);
+		text("Next round in :" + Math.round(timer), windowWidth / 2, 50);
 	
 
 	

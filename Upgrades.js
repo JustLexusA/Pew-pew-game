@@ -25,5 +25,5 @@ function upgrades (){
 	text(' : P2 currency', 975, windowHeight/19)
 
     
-}
+	}
 }

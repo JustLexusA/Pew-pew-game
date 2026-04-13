@@ -72,12 +72,9 @@ function mousePressed() {
 		textSize(20);
 		textAlign(CENTER, CENTER);
 		text("Next round in :" + Math.round(timer), windowWidth / 2, 30);
-					timer -= 1/60
-					
-					if (timer <= 0){
-						gameMode = selectionscreen;
-					}
-		}
+		timer -= 1/60
+
+}
 		
 		function pauseScreen() {
 			background(150);
