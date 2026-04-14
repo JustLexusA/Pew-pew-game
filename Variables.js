@@ -26,7 +26,8 @@ let gameMode
 // let start = 0
 // let gameplay = 1
 // let pause = 'Paused'
-let timer = 60
+let timer = 3
+let bossTimer = 120 
 
 let barriers = []
 let playerTanks = []

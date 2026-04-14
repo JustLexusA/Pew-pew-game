@@ -9,14 +9,8 @@ function Arena() {
 	image(arenasurface, leftwall, roof, ArenaWidth - 30, ArenaHeight - 30)
 	pop()
 
-	fill('black')
-		textSize(20);
-		textAlign(CENTER, CENTER);
-		text("Next round in :" + Math.round(timer), windowWidth / 2, 50);
 	
-
 	
-
 	playerTanks.forEach(tank => {
 		tank.draw();
 		tank.update();

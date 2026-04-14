@@ -39,6 +39,12 @@ function mousePressed() {
 	}
 
 	function gameplayScreen() {
+		timer -= 1/60;
+
+		if (timer < 0) {
+			gameMode = selectionscreen;
+		}
+
 		background(100);
 		fill('black');
 		textSize(30);
@@ -71,8 +77,7 @@ function mousePressed() {
 		fill('black')
 		textSize(20);
 		textAlign(CENTER, CENTER);
-		text("Next round in :" + Math.round(timer), windowWidth / 2, 30);
-		timer -= 1/60
+		text("Next round in :" + Math.round(timer), windowWidth / 2, 50);
 
 }
 		
