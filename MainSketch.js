@@ -6,8 +6,8 @@ function preload() {
 	// Start menu background
 	startMenuBackground = loadImage('Textures/image (29).jpeg')
 	// Tank Textures
-	Player1Red = loadImage('Textures/Image (26).jpeg')
-	Player2Blue = loadImage('Textures/Image (27).jpeg')
+	Player1Red = loadImage('Textures/Image (27).jpeg')
+	Player2Blue = loadImage('Textures/Image (26).jpeg')
 
 	// tankMovement = loadSound('Sounds/freesound_community-driving-tank-engine-88503.mp3')
 	// tankExplode = loadSound('Sounds/lumora_studios-pixel-explosion-319166.mp3')
