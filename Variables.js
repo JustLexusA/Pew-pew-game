@@ -30,7 +30,7 @@ function setVariables() {
 		new barrier(createVector(1670, 750), 300, 90),
 		new barrier(createVector(1550, 200), 200, 90),
 		new barrier(createVector(1500, 420), 200, 180),
-		// new barrier(createVector(200, 200), 300, 90),
+		new barrier(createVector(1600, 150), 1000, 100),
 		// new barrier(createVector(200, 200), 300, 90),
 	);
 }
