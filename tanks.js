@@ -17,6 +17,17 @@ class tank {
         fill(this.color);
         rect(0, 0, this.size/2, this.size);
         pop();
+
+        // Draw health bar above the tank
+        push();
+        translate(this.pos.x, this.pos.y - this.size);
+        fill('red');
+        rectMode(CENTER);
+        rect(0, 0, this.size, 10);
+        fill('green');
+        let healthWidth = map(this.health, 0, 100, 0, this.size);
+        rect(-this.size/2 + healthWidth/2, 0, healthWidth, 10);
+        pop();
     }
 
     checkStaticCollisions() {

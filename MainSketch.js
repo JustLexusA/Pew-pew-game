@@ -8,7 +8,7 @@ function preload() {
 	// Sprite Textures
 	Player1Red = loadImage('Textures/Image (27).jpeg')
 	Player2Blue = loadImage('Textures/Image (26).jpeg')
-	Spawn = loadImage('Textures/ spawn.png')
+	Spawn = loadImage('Textures/spawn.png')
 
 	// tankMovement = loadSound('Sounds/freesound_community-driving-tank-engine-88503.mp3')
 	// tankExplode = loadSound('Sounds/lumora_studios-pixel-explosion-319166.mp3')

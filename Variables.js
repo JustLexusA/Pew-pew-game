@@ -11,12 +11,13 @@ function setVariables() {
 
 	
 	playerTanks.push(
-		// new playerTank()
+		// new playerTank(W, S, A, D, Spacebar, color, x, y, img, health)
 		new playerTank(87, 83, 65, 68, 32, 'cyan', 500, 100, Player1Red, 100),
-		new playerTank(38, 40, 37, 39, 161, 'cyan', 500, 100, Player2Blue, 100)
+//		new playerTank(UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW, 191, 'blue', 500, 500, Player2Blue, 100)
+		new playerTank(38, 40, 37, 39, 191, 'cyan', 200, 300, Player2Blue, 100)
 	);
 	enemyTanks.push(
-		new enemyTank('red', -10, -10, 10)
+		new enemyTank('red', -10, -10, 100)
 	);
 	barriers.push(
 		new barrier(createVector(200, 600), 180, 180),

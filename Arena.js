@@ -30,12 +30,14 @@ function Arena() {
 		playerMissle.draw();
 		playerMissle.update();
 		playerMissle.Inputs();
+		playerMissle.checkCollision(enemyTanks);
 	});
 
 	enemyMissles.forEach(enemyMissle => {
 		enemyMissle.draw();
 		enemyMissle.update();
 		enemyMissle.Inputs();
+		enemyMissle.checkCollision(playerTanks);
 	});
  EnemyspawnChecker();
 }
@@ -46,7 +48,7 @@ function EnemyspawnChecker(){
 	if (Timesincelastspawn > spawnInterval && enemyTanks.length < 5) {
 		Lastspawn = currentTimerunning
 		enemyTanks.push(
-			new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 10)
+			new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100)
 		);
 	}
 }
