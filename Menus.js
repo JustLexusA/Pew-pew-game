@@ -36,18 +36,38 @@ function startMenu() {
 
 function mousePressed() {
 	// Checks if it's in starting menu
-	if (gameMode == 0) {
+	if (gameMode == start) {
 		// Check if the start button is clicked
 		if (mouseX > windowWidth / 2 - 100 && mouseX < windowWidth / 2 + 100 &&
 			mouseY > windowHeight / 2 - 50 && mouseY < windowHeight / 2 + 50) {
+				// Reinitialize game state
+				playerTanks = [];
+				enemyTanks = [];
+				playerMissles = [];
+				enemyMissles = [];
+				barriers = [];
+				setVariables();
 				gameMode = gameplay;
 			}
 		}
-		// Checks if the 'Options' button is clicked
-
+		// Checks if the 'Return to main menu' button is clicked
+	if (gameMode == pause) {
+		if (mouseX > windowWidth / 2 - 100 && mouseX < windowWidth / 2 + 100 &&
+			mouseY > windowHeight / 2 + 100 && mouseY < windowHeight / 2 + 150) {
+			gameMode = start;
+			// Clear all objects immediately
+			playerTanks = [];
+			enemyTanks = [];
+			playerMissles = [];
+			enemyMissles = [];
+			barriers = [];
+			// Reset timer and spawn variables
+			timer = roundLength;
+			Lastspawn = 0;
+		}
 	}
-
-	function gameplayScreen() {
+}
+function gameplayScreen() {
 		timer -= 1/60;
 
 		if (timer < 0) {
@@ -63,41 +83,39 @@ function mousePressed() {
 		// Press 'P' to pause the game
 		textSize(20);
 		text("Press 'P' to pause the game", windowWidth / 2, windowHeight / 2 + 40);
-		//player imgs
-		// player.update();
-		// player.draw();
 		// Draws the arena
 		Arena();
-		// playerTanks.forEach(tank => {
-			// 	tank.draw();
-			// 	tank.update();
-			// });
-			// enemyTanks.forEach(tank => {
-				// 	tank.draw();
-				// 	tank.update();
-				// });
-				
-				// missles.forEach(missle => {
-					// missle.draw();
-					// missle.update();
-					// missle.Inputs();
-					// });
-
 		fill('black')
 		textSize(20);
 		textAlign(CENTER, CENTER);
 		text("Next round in :" + Math.round(timer), windowWidth / 2, 50);
 
+		SpawnEverything();
+
 }
 		
-		function pauseScreen() {
-			background(150);
-			fill('black');
+function pauseScreen() {
+	background(150);
+	fill('black');
 	textSize(30);
 	textAlign(CENTER, CENTER);
 	text("Game Paused", windowWidth / 2, windowHeight / 2);	
 	textSize(20);
 	text("Press 'P' to resume the game", windowWidth / 2, windowHeight / 2 + 40);
+
+	// Return to main menu button
+	buttonColour = color(200, 200, 200);
+	if (mouseX > windowWidth / 2 - 100 && mouseX < windowWidth / 2 + 100 &&
+		mouseY > windowHeight / 2 + 100 && mouseY < windowHeight / 2 + 150) {
+		buttonColour = color(225, 225, 225);
+	}
+	fill(buttonColour);
+	rectMode(CENTER)
+	rect(windowWidth / 2, windowHeight / 2 + 125, 200, 50, 10);
+	fill('black')
+	textSize(20);
+	textAlign(CENTER, CENTER);
+	text("Return to Main Menu", windowWidth / 2, windowHeight / 2 + 125);
 }
 
 function Shop(){

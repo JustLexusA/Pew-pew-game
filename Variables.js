@@ -17,7 +17,7 @@ function setVariables() {
 		new playerTank(38, 40, 37, 39, 191, 'cyan', 200, 300, Player2Blue, 100)
 	);
 	enemyTanks.push(
-		new enemyTank('red', -10, -10, 100)
+		new enemyTank('green', -10, -10, 100)
 	);
 	barriers.push(
 		new barrier(createVector(200, 600), 180, 180),

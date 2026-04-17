@@ -6,6 +6,25 @@ class enemyTank extends tank {
         this.shootCooldown = shootCooldown;
     }
 
+    draw() {
+    // inherets draw function from tank, but can be modified if needed
+        super.draw();
+        // Add the circular base of the tank
+        push();
+        translate(this.pos.x, this.pos.y);
+        rotate(this.angle);
+        fill(this.color);
+        ellipse(0, 0, this.size/3);
+        pop();
+
+        // Add nozzle to indicate direction
+        push();
+        translate(this.pos.x, this.pos.y);
+        rotate(this.angle - 180);
+        fill('darkgreen');
+        rect(0, -this.size / 3, this.size / 8, this.size / 2);
+        pop();
+    }
     update() {
         super.checkStaticCollisions();
         this.angleDifference;
