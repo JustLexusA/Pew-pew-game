@@ -92,6 +92,13 @@ function gameplayScreen() {
 
 		SpawnEverything();
 
+		// Checks if player tanks are destroyed and ends the game if they are
+		for (let i = 0; i < playerTanks.length; i++) {
+			if (playerTanks[i].health <= 0) {
+				gameMode = gameover;
+			}
+		}
+
 }
 		
 function pauseScreen() {
@@ -116,6 +123,14 @@ function pauseScreen() {
 	textSize(20);
 	textAlign(CENTER, CENTER);
 	text("Return to Main Menu", windowWidth / 2, windowHeight / 2 + 125);
+}
+
+function gameoverScreen() {
+	background(0);
+	fill('white');
+	textSize(50);
+	textAlign(CENTER, CENTER);
+	text("Game Over", windowWidth / 2, windowHeight / 2);
 }
 
 function Shop(){

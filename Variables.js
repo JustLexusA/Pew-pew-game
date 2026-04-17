@@ -60,6 +60,7 @@ const gameplay = 1
 const pause = 2
 const selectionscreen = 3
 const shop = 4
+const gameover = 5
 
 let Player2Blue;
 let Player1Red;

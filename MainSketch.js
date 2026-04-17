@@ -58,6 +58,9 @@ function draw() {
 		case shop:
 			shopScreen();
 			break;
+		case gameover:
+			gameoverScreen();
+			break;
 	}
 }
 
