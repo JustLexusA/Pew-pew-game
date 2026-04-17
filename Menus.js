@@ -19,6 +19,15 @@ function startMenu() {
 		textAlign(CENTER, CENTER);
 		text("Start Game", windowWidth / 2, windowHeight / 2);
 		
+		// Display instructions for player 1 and 2 and pause instructions
+		textSize(20);
+		textAlign(CENTER, CENTER);
+		fill('red');
+		text("Player 1 Controls: W,A,S,D to move, spacebar to shoot", windowWidth / 2, windowHeight / 2 + 100);
+		fill('blue');
+		text("Player 2 Controls: Arrow keys to move, / to shoot", windowWidth / 2, windowHeight / 2 + 130);
+		fill('black');
+		text("Press 'P' to pause the game during gameplay", windowWidth / 2, windowHeight / 2 + 160);
 	}
 }
 

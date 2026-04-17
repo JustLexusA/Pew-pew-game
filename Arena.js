@@ -5,9 +5,12 @@ function Arena() {
 	rectMode(CENTER)
 	rect( leftwall, roof, ArenaWidth, ArenaHeight )
 
+	// Draw Arena Surface
 	imageMode(CENTER)
 	image(arenasurface, leftwall, roof, ArenaWidth - 30, ArenaHeight - 30)
 	pop()
+
+	
 	
 	
 	
