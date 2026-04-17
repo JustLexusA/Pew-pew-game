@@ -23,10 +23,10 @@ class tank {
         translate(this.pos.x, this.pos.y - this.size);
         fill('red');
         rectMode(CENTER);
-        rect(0, 0, this.size, 10);
+        rect(0, 0, this.size, 5);
         fill('green');
         let healthWidth = map(this.health, 0, 100, 0, this.size);
-        rect(-this.size/2 + healthWidth/2, 0, healthWidth, 10);
+        rect(-this.size/2 + healthWidth/2, 0, healthWidth, 5);
         pop();
     }
 

@@ -41,7 +41,7 @@ let gameMode
 // let gameplay = 1
 // let pause = 'Paused'
 let spawnInterval = 2.5
-let roundLength = 60
+let roundLength = 300
 let timer = roundLength
 let Lastspawn = 0
 //let bossTimer = 60

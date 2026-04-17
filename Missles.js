@@ -46,6 +46,17 @@ class playerMissle {
         return false; // No collision
 
     }
+    checkBarrierCollisions(barriers) {
+        for (let i = 0; i < barriers.length; i++) {
+            let barrier = barriers[i];
+            let d = dist(this.x, this.y, barrier.pos.x, barrier.pos.y);
+            if (d < this.size / 2 + max(barrier.width, barrier.length) / 2) {
+                // Simple collision response: just remove the missle
+                playerMissles.splice(i, 1);
+                return true; // Collision detected
+            }
+        }        return false; // No collision
+    }
 }
 
 class enemyMissle extends playerMissle {
@@ -80,6 +91,19 @@ class enemyMissle extends playerMissle {
         return false; // No collision
     }
     // The update and Inputs methods are inherited from playerMissle and can be used as is
+    checkBarrierCollisions(barriers) {
+        for (let i = 0; i < barriers.length; i++) {
+            let barrier = barriers[i];
+            let d = dist(this.x, this.y, barrier.pos.x, barrier.pos.y);
+            if (d < this.size / 2 + max(barrier.width, barrier.length) / 2) {
+                // Simple collision response: just remove the missle
+                enemyMissles.splice(i, 1);
+                return true; // Collision detected
+            }
+        }
+        return false; // No collision
+    }
+
 }
 
 // class enemyMissle {

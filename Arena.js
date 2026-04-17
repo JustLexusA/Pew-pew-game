@@ -31,6 +31,7 @@ function Arena() {
 		playerMissle.update();
 		playerMissle.Inputs();
 		playerMissle.checkCollision(enemyTanks);
+		// playerMissle.checkBarrierCollisions(barriers);
 	});
 
 	enemyMissles.forEach(enemyMissle => {
@@ -38,6 +39,7 @@ function Arena() {
 		enemyMissle.update();
 		enemyMissle.Inputs();
 		enemyMissle.checkCollision(playerTanks);
+		// enemyMissle.checkBarrierCollisions(barriers);
 	});
  EnemyspawnChecker();
 }
@@ -45,10 +47,21 @@ function Arena() {
 function EnemyspawnChecker(){
 	let currentTimerunning = Math.abs(timer - roundLength)
 	let Timesincelastspawn = currentTimerunning - Lastspawn
-	if (Timesincelastspawn > spawnInterval && enemyTanks.length < 5) {
+	if (Timesincelastspawn > spawnInterval && enemyTanks.length < 10) {
 		Lastspawn = currentTimerunning
 		enemyTanks.push(
-			new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100)
+			new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100),
+			// new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100),
+			// new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100),
+			// new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100),
+			// new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100),
+			// new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100),
+			// new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100),
+			// new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100),
+			// new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100),
+			// new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100),
+			// new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 100),
+			
 		);
 	}
 }
