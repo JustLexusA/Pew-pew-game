@@ -5,9 +5,10 @@ function preload() {
 	arenasurface = loadImage('Textures/image (28).jpeg')
 	// Start menu background
 	startMenuBackground = loadImage('Textures/image (29).jpeg')
-	// Tank Textures
+	// Sprite Textures
 	Player1Red = loadImage('Textures/Image (27).jpeg')
 	Player2Blue = loadImage('Textures/Image (26).jpeg')
+	Spawn = loadImage('Textures/ spawn.png')
 
 	// tankMovement = loadSound('Sounds/freesound_community-driving-tank-engine-88503.mp3')
 	// tankExplode = loadSound('Sounds/lumora_studios-pixel-explosion-319166.mp3')
@@ -43,7 +44,6 @@ function draw() {
 			break;
 		// if gameMode is 1 and timer is not zero, show gameplay screen
 		case gameplay:
-		case timer < 0:
 			gameplayScreen();
 			break;
 		// if gameMode is 2, show pause screen

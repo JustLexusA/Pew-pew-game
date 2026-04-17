@@ -8,7 +8,7 @@ function Arena() {
 	imageMode(CENTER)
 	image(arenasurface, leftwall, roof, ArenaWidth - 30, ArenaHeight - 30)
 	pop()
-
+	
 	
 	
 	playerTanks.forEach(tank => {
@@ -37,5 +37,16 @@ function Arena() {
 		enemyMissle.update();
 		enemyMissle.Inputs();
 	});
+ EnemyspawnChecker();
+}
 
+function EnemyspawnChecker(){
+	let currentTimerunning = Math.abs(timer - roundLength)
+	let Timesincelastspawn = currentTimerunning - Lastspawn
+	if (Timesincelastspawn > spawnInterval && enemyTanks.length < 5) {
+		Lastspawn = currentTimerunning
+		enemyTanks.push(
+			new enemyTank('red', random(0, windowWidth), random(0, windowHeight), 10)
+		);
+	}
 }

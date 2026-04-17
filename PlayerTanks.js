@@ -8,6 +8,7 @@ class playerTank extends tank {
         this.shoot = shoot;
         this.shootCooldown = shootCooldown;
         this.img = img
+        this.rotationSpeed *= 2
     }
 
     update() {

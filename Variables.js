@@ -13,7 +13,11 @@ function setVariables() {
 	playerTanks.push(
 		// new playerTank()
 		new playerTank(87, 83, 65, 68, 32, 'cyan', 500, 100, Player1Red, 100),
+<<<<<<< HEAD
 		new playerTank(87, 83, 65, 68, 32, 'cyan', 500, 100, Player2Blue, 100)
+=======
+		new playerTank(38, 40, 37, 39, 161, 'cyan', 500, 100, Player2Blue, 100)
+>>>>>>> 384b27160f1a74aed4a25a139ca44085f79ff729
 	);
 	enemyTanks.push(
 		new enemyTank('red', -10, -10, 10)
@@ -30,7 +34,7 @@ function setVariables() {
 		new barrier(createVector(1670, 750), 300, 90),
 		new barrier(createVector(1550, 200), 200, 90),
 		new barrier(createVector(1500, 420), 200, 180),
-		new barrier(createVector(1600, 150), 1000, 100),
+		new barrier(createVector(1600, 150), 1000, 90),
 		// new barrier(createVector(200, 200), 300, 90),
 	);
 }
@@ -39,8 +43,11 @@ let gameMode
 // let start = 0
 // let gameplay = 1
 // let pause = 'Paused'
-let timer = 999999999999
-let bossTimer = 120 
+let spawnInterval = 2.5
+let roundLength = 60
+let timer = roundLength
+let Lastspawn = 0
+//let bossTimer = 60
 
 let barriers = []
 let playerTanks = []
