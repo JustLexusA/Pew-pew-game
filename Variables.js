@@ -12,8 +12,8 @@ function setVariables() {
 	
 	playerTanks.push(
 		// new playerTank()
-		new playerTank(87, 83, 65, 68, 32, 'cyan', 500, 100, Player1Red, 100)
-		// new playerTank(87, 83, 65, 68, 32, 'cyan', 500, 100, Player2Blue, 100)
+		new playerTank(87, 83, 65, 68, 32, 'cyan', 500, 100, Player1Red, 100),
+		new playerTank(87, 83, 65, 68, 32, 'cyan', 500, 100, Player2Blue, 100)
 	);
 	enemyTanks.push(
 		new enemyTank('red', -10, -10, 10)
